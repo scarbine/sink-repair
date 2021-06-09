@@ -1,8 +1,4 @@
-.serviceForm {
-   
-    
 
-}
 
 .button {
     color:aliceblue;
@@ -11,9 +7,7 @@
     padding: .45rem
 }
 
-.submitFields {
-   
-}
+
 
 .field {
     display: flex;
@@ -21,6 +15,3 @@
     margin: 1rem;
 }
 
-.input {
-
-}
