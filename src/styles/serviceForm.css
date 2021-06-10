@@ -15,3 +15,17 @@
     margin: 1rem;
 }
 
+.request_item {
+    display: flex;
+    /* justify-content: flex-start; */
+    margin: .5rem;
+}
+
+.request_description{
+    flex-basis: 80%;
+}
+
+.request__delete{
+background-color: purple;
+color: white;
+}

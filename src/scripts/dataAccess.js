@@ -1,8 +1,9 @@
+
+
 const applicationState = {
     request: [   
 ]
 }
-
 
 
 const API = "http://localhost:8088"
@@ -22,14 +23,7 @@ export const getRequests = () => {
     return applicationState.request.map(request => ({...request}) )
     }
     
-    
-// const requests = getRequests()
-    
-// export const convertRequest = () => {
-//     return `<li>
-//        ${requests.map(listItem => ({...listItem})).join("")}
-//        </li>`
-//     }
+
 
 export const sendRequest = (userServiceRequest) => {
     const fetchOptions = {
@@ -38,13 +32,23 @@ export const sendRequest = (userServiceRequest) => {
             "Content-Type": "application/json"
         },
         body: JSON.stringify(userServiceRequest)
+        
     }
-
 
     return fetch(`${API}/requests`, fetchOptions)
         .then(response => response.json())
         .then(() => {
-
+            document.dispatchEvent(new CustomEvent("stateChanged"))
         })
 }
+
+export const deleteRequest = (id) => {
+    return fetch(`${API}/requests/${id}`, { method: "DELETE" })
+        .then(
+            () => {
+                document.dispatchEvent(new CustomEvent("stateChanged"))
+            }
+        )
+}
+
 

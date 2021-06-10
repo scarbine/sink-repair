@@ -1,5 +1,5 @@
 import {sendRequest} from "./dataAccess.js"
-import { render } from "./main.js"
+
 
 
 export const ServiceForm = () => {
@@ -52,7 +52,7 @@ mainContainer.addEventListener("click", clickEvent => {
         sendRequest(dataToSendToAPI)
 
         //Render HTML
-        // render()
+   
        
     }
 })
