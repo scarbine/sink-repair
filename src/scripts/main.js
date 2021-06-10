@@ -4,7 +4,7 @@ import { SinkRepair } from "./SinkRepair.js"
 
 const mainContainer = document.querySelector("#container")
 
-export const render = () => {
+const render = () => {
     fetchRequests().then(
         () => {
             mainContainer.innerHTML = SinkRepair()
@@ -13,3 +13,9 @@ export const render = () => {
 }
 
 render()
+
+
+document.addEventListener("stateChanged", event => {
+    console.log("State of the data has changed. Regenerating HTML...")
+     render()
+})
