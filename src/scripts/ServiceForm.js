@@ -45,6 +45,7 @@ mainContainer.addEventListener("click", clickEvent => {
             description: userDescription,
             address: userAddress,
             budget: userBudget,
+            isComplete: false,
             neededBy: userDate
         }
 

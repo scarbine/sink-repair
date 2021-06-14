@@ -1,5 +1,14 @@
 {
-  "plumbers": [],
+  "plumbers": [
+    {
+      "id": 1,
+      "name": "Jake"
+    },
+    {
+      "id": 2,
+      "name": "John"
+    }
+  ],
   "completions": [],
   "requests": [
     {
@@ -7,14 +16,24 @@
       "address": "123 Home Lane",
       "budget": "150",
       "neededBy": "2021-06-11",
-      "id": 1
+      "id": 1,
+      "isComplete": false
     },
     {
-      "description": "Bad Bath",
-      "address": "2324",
-      "budget": "645",
-      "neededBy": "2021-06-11",
-      "id": 2
+      "description": "Leaky Tub",
+      "address": "123 Home",
+      "budget": "12",
+      "neededBy": "2020-12-21",
+      "id": 2,
+      "isComplete": false
+    },
+    {
+      "description": "Flooded Basement",
+      "address": "8374 Drip lane",
+      "budget": "422",
+      "isComplete": false,
+      "neededBy": "2021-06-16",
+      "id": 3
     }
   ]
 }
